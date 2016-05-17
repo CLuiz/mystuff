@@ -8,11 +8,12 @@ br.set_handle_robots( False )
 br.addheaders = [('User-agent', 'Firefox')]
 
 # Retrieve the Google home page, saving the response
-br.open( "http://google.com" )
+br.open( "http://www.occpermit.com/WellBrowse/" )
 
 # Select the search box and search for 'foo'
-br.select_form( 'f' )
-br.form[ 'q' ] = 'foo'
+br.select_form( 'ctl00_ContentHolder_contentRight_txtAPINumber' )
+br.form[ 'ctl00$ContentHolder$contentRight$txtAPINumber' ] = 'foo' # insert operator list here
+
 
 # Get the search results
 br.submit()
